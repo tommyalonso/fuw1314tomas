@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>A2: Control Remoto</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body></body> 
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./files/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+	  <font face="ubuntu">
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i>Fundamentos de Hardware</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i>A2: Control Remoto</i></li>
+    <li><b>Componentes del grupo:</b> <i>Tom&aacute;s Rodr&iacute;guez Alonso</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2013/2014</i></li>
+    <li><b>Fecha de entrega:</b> <i>24 de Abril de 2014</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>1. Preparación</a> | <a href='#bloque2'>2. iTalc Master</a> | <a href='#bloque3'>3. iTalc Slave</a> | 
+<a href='#bloque4'>3.1 Cliente Windows</a> | <a href='#bloque5'>3.2 Cliente GNU/Linux</a> | <a href='#bloque6'>4. Comprobación desde el master</a>
+</div>
+
+<p><center><img src='./files/italc.png'/></center></p>
+
+<center><h1><a id='bloque1'>1. Preparación</a></h1></center>
+
+
+<p>Vamos a necesitar 3 máquinas que pueden ser virtuales o reales:
+
+    <li>MV1 italc Master (Debian)</li>
+    <li>MV2 italc Slave (Windows7)</li>
+    <li>MV3 italc Slave (Debian)</li>
+</p>
+
+
+
+<center><h1><a id='bloque2'><u>2. iTalc Master</u></a></h1></center>
+
+<li>Instalar iTalc Master (Maestro) en un equipo GNU/Linux o Windows.</li>
+<p><center><img border="3px" src='./files/institalc.png'/></center></p>
+
+<li>Para crear las claves de iTalc ejecutamos el comando "ica -createkeypair"</li>
+<p><center><img border="3px" src='./files/ica-create.png'/></center></p>
+
+<li>Creamos el grupo italc, y añadimos nuestro usuario "maul" al grupo:</li>
+	<ol>1.- addgroup italc</ol>
+	<ol>2.- usermod maul --groups italc</ol>
+	<p><center><img border="3px" src='./files/usermaul.png'/></center></p>
+	
+<li>Damos permisos al grupo italc, para tener acceso a las claves de italc:</li>
+	<ol>cd /etc/italc; chgrp -R italc keys</ol>
+	<p><center><img border="3px" src='./files/permisos.png'/></center></p>
+	
+<li>Verificar que el servicio está iniciado (ps -ef |grep ica). Si el programa "ica" no está iniciado, 
+lo podemos iniciar manualmente. Para ello abrimos un terminal y escribimos: /usr/bin/ica & </li>
+<p><center><img border="3px" src='./files/iniciarservicio.png'/></center></p>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
